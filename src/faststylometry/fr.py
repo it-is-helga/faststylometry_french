@@ -86,7 +86,7 @@ def tokenise_remove_pronouns_fr(text: str) -> list:
     :param text: the original sentence.
     :return: all non-pronoun tokens.
     """
-    text_normalised = re.sub("['’]", "", text.lower())
+    text_normalised = re.sub("['’]", " ", text.lower())
     tokens = [tok for tok in re_words.findall(text_normalised) if not is_number_pattern.match(tok)]
 
     tokens_without_stopwords = [tok for tok in tokens if tok not in stopwords_fr]
