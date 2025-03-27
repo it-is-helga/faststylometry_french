@@ -34,8 +34,48 @@ is_number_pattern = re.compile(r'.*\d.*')
 re_words = re.compile(r"\w+")
 
 # pronouns
-with open("stopwords_fr.txt", "r", encoding="utf-8") as file:
-    stopwords_fr = {line.strip() for line in file}
+# with open("stopwords_fr.txt", "r", encoding="utf-8") as file:
+#     stopwords_fr = {line.strip() for line in file}
+stopwords_fr = {'elle',
+ 'elles',
+ 'eux',
+ 'il',
+ 'ils',
+ 'j',
+ "j'",
+ "j'ai",
+ "j'avais",
+ "j'étais",
+ 'je',
+ 'leur',
+ 'leurs',
+ 'lui',
+ 'm',
+ "m'",
+ 'ma',
+ 'me',
+ 'mes',
+ 'moi',
+ 'mon',
+ 'nos',
+ 'notre',
+ 'nous',
+ 'on',
+ "qu'elle",
+ "qu'elles",
+ "qu'il",
+ "qu'ils",
+ "qu'on",
+ 't',
+ "t'",
+ 'ta',
+ 'te',
+ 'tes',
+ 'toi',
+ 'ton',
+ 'vos',
+ 'votre',
+ 'vous'}
 
 
 def tokenise_remove_pronouns_fr(text: str) -> list:
